@@ -1,0 +1,148 @@
+/* homepage.css */
+
+/* Overall layout */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow: hidden;
+
+}
+
+.container {
+  display: flex;
+  height: 100%;
+  overflow: hidden;
+}
+
+.chat-list {
+  width: 200px;
+  background-color: #f0f0f0;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+
+#chat-window {
+  flex-grow: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+/* Chat list */
+#chat-list-items {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#chat-list-items li {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.chat-list-item-text {
+  color: #333;
+  font-weight: bold;
+}
+
+.chat-list-item-text:hover {
+  text-decoration: underline;
+  color: #555;
+}
+
+.chat-list-item-selected {
+  background-color: #ccc;
+}
+
+/* Chat window */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.chat-window-title {
+  color: #333;
+  font-size: 18px;
+  margin-top: 0;
+}
+
+#logout-button {
+  padding: 8px 16px;
+  font-size: 16px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#logout-button:hover {
+  background-color: #d32f2f;
+}
+
+#chat-messages {
+  height: 300px;
+  border: 1px solid #ccc;
+  overflow-y: scroll;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.message {
+  margin-bottom: 10px;
+}
+.received-message {
+  text-align: left;
+}
+
+.sender-message {
+  text-align: right;
+}
+
+.sender-name {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.message-content {
+  background-color: #f0f0f0;
+  padding: 8px;
+  border-radius: 8px;
+}
+.input-container {
+  display: flex;
+  align-items: center;
+}
+
+#message-input {
+  flex-grow: 1;
+  padding: 8px;
+  font-size: 16px;
+}
+
+#send-button {
+  margin-left: 10px;
+  padding: 8px 16px;
+  font-size: 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#send-button:hover {
+  background-color: #45a049;
+}

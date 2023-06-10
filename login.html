@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chat Application - Login</title>
+    <link rel="stylesheet" type="text/css" href="login.css" />
+  </head>
+  <body>
+    <div id="login-container">
+      <h2>Login</h2>
+      <div id="error-message"></div>
+      <input type ="text" id = "username-input" placeholder="User Name"/>
+      <input type="email" id="email-input" placeholder="Email" />
+      <input type="password" id="password-input" placeholder="Password" />
+      <button type="submit" id="login-button">Login</button>
+      <div id="signup-link-container">
+        <p>Don't have an account? <a href="signup.html">Sign up</a></p>
+      </div>
+      <button id="google-login-button">Login with Google</button>
+    </div>
+
+    <!-- Add the Firebase SDK scripts -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-firestore.js"></script>
+
+    <script src="login.js"></script>
+  </body>
+</html>

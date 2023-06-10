@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Web Application</title>
+    <!-- Include any necessary CSS files -->
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+    <div id="loader"></div>
+
+    <!-- Include the Firebase SDK scripts -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-firestore.js"></script>
+
+    <script>
+      // Initialize Firebase
+      var firebaseConfig = {
+        apiKey: "AIzaSyAK-6ezzc_1VUqpZwmAig9vsrIiXotuR0A",
+        authDomain: "chatappweb-ee192.firebaseapp.com",
+        projectId: "chatappweb-ee192",
+        storageBucket: "chatappweb-ee192.appspot.com",
+        messagingSenderId: "1085349594917",
+        appId: "1:1085349594917:web:26aac40a2e492e1946bccc",
+      };
+      firebase.initializeApp(firebaseConfig);
+
+      // Check if a user is logged in
+      firebase.auth().onAuthStateChanged(function (user) {
+        if (user) {
+          // User is logged in
+          window.location.href = "homepage.html";
+        } else {
+          // User is not logged in
+          window.location.href = "login.html";
+        }
+      });
+    </script>
+  </body>
+</html>
